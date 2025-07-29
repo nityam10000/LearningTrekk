@@ -174,9 +174,9 @@ function CourseDetail() {
         
         return (
             <div className="price-display">
-                <span className="current-price">${price}</span>
+                <span className="current-price">₹{price}</span>
                 {originalPrice && originalPrice > price && (
-                    <span className="original-price">${originalPrice}</span>
+                    <span className="original-price">₹{originalPrice}</span>
                 )}
             </div>
         );
