@@ -1,16 +1,17 @@
-# E-Learning Platform Frontend
+# E-Learning Platform
 
-A modern, responsive e-learning platform built with React.js. This is a **frontend-only** demonstration project showcasing a complete user interface for an online learning platform.
+A modern, responsive e-learning platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js). This project showcases a complete, full-stack application for an online learning platform.
 
 ## 🌟 Features
 
-- **Modern UI/Design**: Clean, professional interface with a unified theme system
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Course Catalog**: Browse and explore various courses with filtering
-- **Blog System**: Read educational blog posts with categories and search
-- **User Authentication**: Mock login/signup system for demonstration
-- **Interactive Components**: Carousels, cards, and dynamic content
-- **Theme Consistency**: Unified color scheme and styling across all components
+- **Modern UI/Design**: Clean, professional interface with a unified theme system.
+- **Full-Stack Architecture**: Separate frontend and backend for a scalable and maintainable structure.
+- **Responsive Layout**: Fully responsive design that works on all devices.
+- **Course Management**: Create, read, update, and delete courses.
+- **User Authentication**: Secure user registration and login system with JWT.
+- **Enrollment System**: Users can enroll in courses.
+- **Blog System**: Read and create educational blog posts.
+- **API**: A well-structured RESTful API for all platform functionalities.
 
 ## 🎨 Design System
 
@@ -25,118 +26,87 @@ A modern, responsive e-learning platform built with React.js. This is a **fronte
 
 - Node.js (version 14 or higher)
 - npm or yarn package manager
+- MongoDB (local or a cloud instance like MongoDB Atlas)
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd e-learning-frontend
-   ```
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd e-learning-platform
+    ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+2.  **Setup Backend:**
+    ```bash
+    cd backend
+    npm install
+    ```
+    Create a `.env` file in the `backend` directory and add the following environment variables:
+    ```
+    PORT=5000
+    MONGO_URI=<your_mongodb_connection_string>
+    JWT_SECRET=<your_jwt_secret>
+    ```
 
-3. Start the development server:
-   ```bash
-   npm start
-   ```
+3.  **Setup Frontend:**
+    ```bash
+    cd ../frontend
+    npm install
+    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Running the Application
+
+1.  **Start the backend server:**
+    ```bash
+    cd backend
+    npm start
+    ```
+    The backend server will be running on `http://localhost:5000`.
+
+2.  **Start the frontend development server:**
+    ```bash
+    cd frontend
+    npm start
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## 📁 Project Structure
 
 ```
-src/
-├── components/          # Reusable React components
-│   ├── pages/          # Page components (Home, Courses, Blog, etc.)
-│   ├── images/         # Component-specific images
-│   └── ...             # Other components (Navbar, Footer, Cards, etc.)
-├── css/                # Styling files
-├── App.js              # Main application component
-└── index.js            # Application entry point
+e-learning-platform/
+├── backend/
+│   ├── controllers/      # Request handlers
+│   ├── middleware/       # Custom middleware (e.g., auth)
+│   ├── models/           # Mongoose models
+│   ├── routes/           # API routes
+│   └── server.js         # Backend entry point
+└── frontend/
+    ├── public/           # Static assets
+    ├── src/
+    │   ├── components/   # Reusable React components
+    │   ├── contexts/     # React contexts for state management
+    │   ├── pages/        # Page components
+    │   ├── services/     # API service for frontend-backend communication
+    │   └── App.js        # Main application component
+    └── package.json
 ```
-
-## 🔧 Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in development mode. The page will reload if you make edits.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-## 📱 Pages & Features
-
-### Home Page
-
-- Hero section with call-to-action
-- Featured courses carousel
-- New courses section
-- Latest blog posts
-- Top categories
-
-### Courses Page
-
-- Complete course catalog
-- Course cards with descriptions
-- Category-based organization
-
-### Blog Page
-
-- Educational blog posts
-- Category filtering
-- Search functionality
-- Individual blog post pages
-
-### Authentication
-
-- Mock login/signup forms
-- Frontend-only user session simulation
-- Account management page
-
-## 🎯 Demo Mode
-
-This project runs in **demo mode** with:
-
-- Mock data for courses and blog posts
-- Simulated user authentication
-- Frontend-only functionality
-- No backend dependencies
 
 ## 🛠 Technologies Used
 
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web framework for Node.js
+- **MongoDB** - NoSQL database
+- **Mongoose** - ODM for MongoDB
+- **JWT (JSON Web Tokens)** - For authentication
+- **bcryptjs** - For password hashing
+
+### Frontend
 - **React** 18.2.0 - Frontend framework
-- **React Router** 7.7.0 - Client-side routing
-- **React Multi Carousel** - Interactive carousels
+- **React Router** - Client-side routing
+- **Axios** - For making HTTP requests to the backend
 - **FontAwesome** - Icons and UI elements
 - **CSS Custom Properties** - Theme system
-- **Responsive Design** - Mobile-first approach
-
-## 🎨 Customization
-
-The project uses CSS custom properties for easy theming. You can modify colors, fonts, and spacing by updating the variables in `src/index.css`:
-
-```css
-:root {
-  --primary-color: #667eea;
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  /* ... other theme variables */
-}
-```
 
 ## 📝 License
 
@@ -144,12 +114,8 @@ This project is licensed under the ISC License.
 
 ## 🤝 Contributing
 
-This is a demonstration project. Feel free to fork and customize for your own needs!
+Contributions are welcome! Please feel free to fork the repository, make changes, and submit a pull request.
 
 ## 📞 Support
 
-For questions or support, please refer to the code comments or React documentation.
-
----
-
-*This is a frontend-only demonstration project. All functionality is simulated for educational and portfolio purposes.*
+For questions or support, please open an issue in the repository.
