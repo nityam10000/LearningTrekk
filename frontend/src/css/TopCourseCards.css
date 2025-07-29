@@ -1,0 +1,117 @@
+/* TopCourseCards Component Styles */
+.top-course-cards {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.top-course-cards h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+/* Top Course Carousel Specific Styles */
+.top-course-carousel.carousel-container {
+  padding-bottom: 1rem;
+}
+
+.top-course-carousel .react-multi-carousel-track {
+  padding: 1rem 0;
+}
+
+.top-course-carousel .react-multi-carousel-arrow {
+  min-width: 40px;
+  min-height: 40px;
+  background: var(--text-primary) !important;
+  border-radius: 50%;
+  border: none;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.top-course-carousel .react-multi-carousel-arrow:hover {
+  background: var(--gray-800) !important;
+  transform: scale(1.1);
+}
+
+.top-course-carousel .react-multi-carousel-arrow--left {
+  left: 0;
+}
+
+.top-course-carousel .react-multi-carousel-arrow--right {
+  right: 0;
+}
+
+/* Top Course Card Wrapper */
+.top-course-card-wrapper {
+  padding: 0 0.5rem;
+}
+
+/* Loading State */
+.top-course-cards .loading-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.top-course-cards .loading-text {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Error State */
+.top-course-cards .error-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.top-course-cards .error-message {
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Empty State */
+.top-course-cards .empty-state {
+  text-align: center;
+  padding: 50px;
+}
+
+.top-course-cards .empty-state p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .top-course-cards {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-course-cards {
+    padding: 2rem 1rem;
+  }
+  
+  .top-course-cards h1 {
+    font-size: 2rem;
+  }
+  
+  .top-course-card-wrapper {
+    padding: 0 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-course-cards {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .top-course-cards h1 {
+    font-size: 1.75rem;
+  }
+}

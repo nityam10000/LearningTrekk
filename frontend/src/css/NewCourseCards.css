@@ -1,0 +1,117 @@
+/* NewCourseCards Component Styles */
+.new-course-cards {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.new-course-cards h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+/* Course Carousel Specific Styles */
+.course-carousel.carousel-container {
+  padding-bottom: 1rem;
+}
+
+.course-carousel .react-multi-carousel-track {
+  padding: 1rem 0;
+}
+
+.course-carousel .react-multi-carousel-arrow {
+  min-width: 40px;
+  min-height: 40px;
+  background: var(--text-primary) !important;
+  border-radius: 50%;
+  border: none;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.course-carousel .react-multi-carousel-arrow:hover {
+  background: var(--gray-800) !important;
+  transform: scale(1.1);
+}
+
+.course-carousel .react-multi-carousel-arrow--left {
+  left: 0;
+}
+
+.course-carousel .react-multi-carousel-arrow--right {
+  right: 0;
+}
+
+/* Course Card Wrapper */
+.course-card-wrapper {
+  padding: 0 0.5rem;
+}
+
+/* Loading State */
+.new-course-cards .loading-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.new-course-cards .loading-text {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Error State */
+.new-course-cards .error-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.new-course-cards .error-message {
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Empty State */
+.new-course-cards .empty-state {
+  text-align: center;
+  padding: 50px;
+}
+
+.new-course-cards .empty-state p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .new-course-cards {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-course-cards {
+    padding: 2rem 1rem;
+  }
+  
+  .new-course-cards h1 {
+    font-size: 2rem;
+  }
+  
+  .course-card-wrapper {
+    padding: 0 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-course-cards {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .new-course-cards h1 {
+    font-size: 1.75rem;
+  }
+}

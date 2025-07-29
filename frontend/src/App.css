@@ -1,0 +1,87 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: var(--text-primary); /* Pure black */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--white); /* Pure white text */
+}
+
+.App-link {
+  color: var(--white); /* White links instead of blue */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Home Page - Consistent Black & White Theme */
+.home-container {
+    background: var(--white); /* Pure white background for entire home page */
+    min-height: 100vh;
+}
+
+/* Ensure all sections on home page have consistent spacing and background */
+.home-container > * {
+    background: var(--white);
+}
+
+/* Courses Page Styles - Black & White Theme */
+.courses-hero-section {
+    background: var(--text-primary); /* Pure black background */
+    color: var(--white); /* Pure white text */
+    text-align: center;
+    padding: 80px 20px 60px;
+    margin-bottom: 40px;
+    border-bottom: none; /* Remove border since black background doesn't need separation */
+}
+
+.courses-title {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 20px;
+    text-shadow: none;
+    color: var(--white); /* Ensure white text */
+}
+
+.courses-subtitle {
+    font-size: var(--text-xl);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: var(--leading-relaxed);
+    opacity: 0.9;
+    color: var(--white); /* Use white text */
+}
+
+@media screen and (max-width: 768px) {
+    .courses-title {
+        font-size: var(--text-4xl);
+    }
+    
+    .courses-subtitle {
+        font-size: var(--text-base);
+        padding: 0 10px;
+    }
+    
+    .courses-hero-section {
+        padding: 60px 20px 40px;
+    }
+}

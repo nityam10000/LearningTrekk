@@ -1,0 +1,171 @@
+/* NewBlogCards Component Styles */
+.new-blog-cards {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.blog-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.blog-section-header .header-content {
+  text-align: center;
+  width: 100%;
+}
+
+.blog-section-header .header-content h1 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.blog-section-header .header-content p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.api-error-notice {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.api-error-notice i {
+  color: #f59e0b;
+}
+
+.blog-card-wrapper {
+  padding: 0 0.5rem;
+}
+
+/* Blog Carousel Specific Styles */
+.blog-carousel.carousel-container {
+  padding-bottom: 1rem;
+}
+
+.blog-carousel .react-multi-carousel-track {
+  padding: 1rem 0;
+}
+
+.blog-carousel .react-multi-carousel-arrow {
+  min-width: 40px;
+  min-height: 40px;
+  background: var(--text-primary) !important;
+  border-radius: 50%;
+  border: none;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.blog-carousel .react-multi-carousel-arrow:hover {
+  background: var(--gray-800) !important;
+  transform: scale(1.1);
+}
+
+.blog-carousel .react-multi-carousel-arrow--left {
+  left: 0;
+}
+
+.blog-carousel .react-multi-carousel-arrow--right {
+  right: 0;
+}
+
+/* Loading State */
+.new-blog-cards .loading-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.new-blog-cards .loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.new-blog-cards .loading-text {
+  margin-top: 20px;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Error State */
+.new-blog-cards .error-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.new-blog-cards .error-message {
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.new-blog-cards .error-fallback {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .new-blog-cards {
+    padding: 2rem 1rem;
+  }
+  
+  .blog-section-header {
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .blog-section-header .header-content h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-section-header .header-content p {
+    font-size: 1rem;
+  }
+  
+  .blog-card-wrapper {
+    padding: 0 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-blog-cards {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .blog-section-header .header-content h1 {
+    font-size: 1.75rem;
+  }
+  
+  .api-error-notice {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,325 @@
+/* Search Bar Component Styles */
+.searchbar-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.searchbar-input-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.searchbar-input-container {
+  position: relative;
+  flex: 1;
+}
+
+.searchbar-input {
+  width: 100%;
+  padding: 15px 50px 15px 45px;
+  border: 2px solid var(--gray-300);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background: var(--white);
+  color: var(--text-primary);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.searchbar-input:focus {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.searchbar-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.searchbar-clear-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.searchbar-clear-btn:hover {
+  background: var(--gray-100);
+  color: var(--text-primary);
+}
+
+/* Filter Toggle Button */
+.searchbar-filter-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  background: var(--white);
+  border: 2px solid var(--gray-300);
+  border-radius: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  white-space: nowrap;
+  position: relative;
+}
+
+.searchbar-filter-toggle-btn:hover {
+  border-color: var(--text-primary);
+  background: var(--gray-50);
+}
+
+.searchbar-filter-toggle-btn.active {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--white);
+}
+
+.searchbar-filter-count {
+  background: var(--white);
+  color: var(--text-primary);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.searchbar-filter-toggle-btn.active .searchbar-filter-count {
+  background: var(--gray-800);
+  color: var(--white);
+}
+
+/* Filter Panel */
+.searchbar-filter-panel {
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchbar-filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.searchbar-filter-header h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.searchbar-clear-filters-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.searchbar-clear-filters-btn:hover {
+  background: var(--gray-100);
+}
+
+/* Filter Groups */
+.searchbar-filter-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.searchbar-filter-group {
+  border-right: 1px solid var(--gray-200);
+  padding-right: 20px;
+}
+
+.searchbar-filter-group:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.searchbar-filter-group-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+}
+
+.searchbar-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.searchbar-filter-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.searchbar-filter-option:hover {
+  background: var(--gray-100);
+  border-color: var(--text-primary);
+}
+
+.searchbar-filter-option.active {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--white);
+}
+
+.searchbar-option-count {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-left: auto;
+}
+
+/* Active Filters */
+.searchbar-active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.searchbar-active-filter-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--text-primary);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.searchbar-active-filter-tag button {
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.searchbar-active-filter-tag button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Search Suggestions */
+.searchbar-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .searchbar-input-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .searchbar-filter-toggle-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .searchbar-filter-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .searchbar-filter-group {
+    border-right: none;
+    border-bottom: 1px solid var(--gray-200);
+    padding-right: 0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .searchbar-filter-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .searchbar-input {
+    padding: 12px 40px 12px 40px;
+  }
+
+  .searchbar-active-filters {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .searchbar-input {
+    padding: 10px 35px 10px 35px;
+  }
+
+  .searchbar-filter-panel {
+    padding: 15px;
+  }
+
+  .searchbar-filter-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

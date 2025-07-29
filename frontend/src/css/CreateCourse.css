@@ -1,0 +1,405 @@
+/* Create Course Styles */
+.create-course {
+    min-height: 100vh;
+    background: var(--bg-secondary);
+    padding: 20px;
+}
+
+.course-card-wrapper {
+    margin: 1rem 0.25rem;
+}
+
+.cards-header {
+    text-align: center;
+}
+
+.create-course-header {
+    background: var(--text-primary);
+    color: white;
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-description-full {
+    margin-top: 1rem;
+}
+
+.reviews-header button {
+    background: var(--text-primary);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.reviews-header button:hover {
+    background: var(--gray-700);
+}
+
+.review-item {
+    border: 1px solid var(--gray-300);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background: var(--white);
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+}
+
+.header-content p {
+    color: rgb(161, 161, 161);
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.cancel-btn,
+.submit-btn {
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    border: none;
+}
+
+.cancel-btn {
+    background: var(--white);
+    color: var(--text-primary);
+    border: 2px solid var(--white);
+}
+
+.cancel-btn:hover {
+    background: var(--gray-100);
+}
+
+.submit-btn {
+    background: var(--white);
+    color: var(--text-primary);
+    border: 2px solid var(--white);
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: var(--gray-100);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Course Form */
+.course-form {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+}
+
+.form-sections {
+    padding: 2rem;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-200);
+    position: relative;
+}
+
+.form-section:last-child {
+    margin-bottom: 0;
+}
+
+.form-section h3 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--gray-300);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    transition: var(--transition);
+    background: var(--white);
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--text-primary);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #e53e3e;
+}
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+    background: var(--gray-100);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.error-message {
+    display: block;
+    margin-top: 0.5rem;
+    color: #e53e3e;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    background: rgba(229, 62, 62, 0.1);
+    border-radius: var(--border-radius);
+    border-left: 4px solid #e53e3e;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+/* Select Styling */
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+    padding-right: 3rem;
+}
+
+/* Number Input */
+.form-group input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Placeholder Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+}
+
+/* Character counter */
+.form-group .char-counter {
+    text-align: right;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Markdown Preview */
+.preview-toggle {
+    margin-bottom: 1rem;
+}
+
+.markdown-preview {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-top: 1rem;
+    max-height: 500px;
+    overflow-y: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
+    color: var(--text-primary);
+    margin: 1rem 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.markdown-preview h1 {
+    font-size: 1.5rem;
+}
+
+.markdown-preview h2 {
+    font-size: 1.25rem;
+}
+
+.markdown-preview h3 {
+    font-size: 1.125rem;
+}
+
+.markdown-preview p {
+    margin: 0.75rem 0;
+    color: var(--text-secondary);
+}
+
+.markdown-preview pre {
+    background: var(--text-primary);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+}
+
+.markdown-preview code {
+    background: var(--gray-200);
+    color: var(--text-primary);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius-sm);
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+}
+
+.markdown-preview pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+.markdown-preview blockquote {
+    border-left: 4px solid var(--text-primary);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: var(--text-secondary);
+    font-style: italic;
+    background: var(--gray-50);
+    padding: 0.75rem 1rem;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.markdown-preview li {
+    margin: 0.25rem 0;
+}
+
+.markdown-preview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.markdown-preview th,
+.markdown-preview td {
+    border: 1px solid var(--gray-200);
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.markdown-preview th {
+    background: var(--gray-100);
+    font-weight: 600;
+}
+
+.markdown-preview a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.markdown-preview a:hover {
+    text-decoration: underline;
+}
+
+.markdown-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 0.5rem 0;
+}
+
+.markdown-preview hr {
+    border: none;
+    border-top: 1px solid var(--gray-200);
+    margin: 1.5rem 0;
+}
