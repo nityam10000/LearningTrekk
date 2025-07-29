@@ -10,14 +10,7 @@ const app = express();
 // Middleware
 app.use(helmet());
 app.use(morgan('combined'));
-app.use(cors({
-    origin: [
-        process.env.FRONTEND_URL || 'http://localhost:3000',
-        'http://localhost:3001', // Add support for port 3001
-        'http://localhost:3000'  // Keep original port for compatibility
-    ],
-    credentials: true
-}));
+app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
