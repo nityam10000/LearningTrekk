@@ -9,25 +9,8 @@ function HeroSection() {
             <img className="hero-background-img" src="/images/banner1.png" alt="E-learning platform background" />
             
             <div className="hero-content">
-                <h1 className="hero-title">The Only Place for Programming Hustlers!</h1>
-                <p className="hero-subtitle">Master programming skills with our comprehensive courses and join thousands of successful developers.</p>
-{/*                 
-                <div className="hero-btns">
-                    <Button 
-                        className='btns' 
-                        buttonStyle='btn--calltoaction' 
-                        buttonSize='btn--large'
-                    >
-                        GET STARTED
-                    </Button>
-                    <Button 
-                        className='btns' 
-                        buttonStyle='btn--secondary' 
-                        buttonSize='btn--large'
-                    >
-                        WATCH DEMO
-                    </Button>
-                </div> */}
+                <h1 className="hero-title">The Only Place for Hustlers!</h1>
+                <p className="hero-subtitle">Master any skills with our comprehensive courses and join thousands of successful professionals.</p>
 
                 <div className="hero-stats">
                     <div className="stat-item">
