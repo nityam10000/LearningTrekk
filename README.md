@@ -2,6 +2,8 @@
 
 A modern, responsive e-learning platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js). This project showcases a complete, full-stack application for an online learning platform.
 
+Visit my website at: https://learning-trekk-zfgd.vercel.app/
+
 ## 🌟 Features
 
 - **Modern UI/Design**: Clean, professional interface with a unified theme system.
